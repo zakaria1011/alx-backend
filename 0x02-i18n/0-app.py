@@ -5,7 +5,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route('/')
+@app.route('/', strict_slashes=False)
 def index():
     """ redner template"""
     return render_template('0-index.html')
